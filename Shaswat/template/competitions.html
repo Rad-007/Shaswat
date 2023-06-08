@@ -1,0 +1,341 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Shaswat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Aayush">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'assets/css/competition.css' %}">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="website icon"  type="png" href="/static/images/icon.png">
+  
+</head>
+
+
+
+
+
+<body >
+
+  <div class="navigation my-augborder">
+    <ul>
+        <li class="list active">
+            <a href="/">
+                <span class="icon" style="color: aliceblue">
+                    <ion-icon name="home-outline" style="color: aliceblue"></ion-icon>
+                </span>
+                <span class="text" style="color: aliceblue">Home</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="profile">
+                <span class="icon">
+                    <ion-icon name="person-outline" style="color: aliceblue"></ion-icon>
+                </span>
+                <span class="text" style="color: aliceblue">Profile</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#">
+                <span class="icon">
+                    <ion-icon name="chatbubble-outline" style="color: aliceblue"></ion-icon>
+                </span>
+                <span class="text" style="color: aliceblue">Contact</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="#">
+                <span class="icon">
+                    <ion-icon name="people-outline" style="color: aliceblue; "></ion-icon>
+                </span>
+                <span class="text" style="color: aliceblue">Team</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="signup">
+                <span class="icon">
+                    <ion-icon name="log-in-outline" style="color: aliceblue;"></ion-icon>
+                </span>
+                <span class="text" style="color: aliceblue">Register </span>
+            </a>
+        </li>
+        <div class="indicator"></div>
+    </ul>
+</div>
+
+    <h1 class="neon">Competitions<br></h1>
+
+    
+   
+    
+    <!--Signature-->
+    <script>
+
+const list = document.querySelectorAll ('.list');
+            function activeLink(){
+                list.forEach((item) =>
+                item.classList.remove('active'));
+                this.classList.add('active');
+            }
+            list.forEach((item) =>
+            item.addEventListener('click',activeLink));
+    </script>
+    <!--Java Link-->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="script.js"></script>
+      
+
+
+    <!--
+
+<div class="container-1">
+  <div class="card">
+    <div class="txt">
+      <H1>CSS Graphic</H1>
+      <p>Card Hover Design</p>
+    </div>
+  </div>
+</div>
+
+
+
+    -->
+
+
+
+    <h1 class="neon" style="text-align: center;">Cultural Competitions<br></h1>
+
+<div class="container">
+    <div class="wrap">
+        
+            
+            
+
+  <div class="container gallery__item gallery__item--1">
+  <div class="content">
+    <a href="emo_splash" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{% static 'images/painting.jpeg' %}">
+      <div class="content-details">
+        <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+
+<div class="container gallery__item gallery__item--2">
+    <div class="content">
+      <a href="shuttershowdown" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static 'images/photography.jpeg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container gallery__item gallery__item--3">
+    <div class="content">
+      <a href="headshot_heroes" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static '/images/gaming3.jpeg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container gallery__item gallery__item--4">
+    <div class="content">
+      <a href="#" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static '/images/dance2.jpeg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container gallery__item gallery__item--5">
+    <div class="content">
+      <a href="tone_of_titans" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static 'images/singing1.jpeg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container gallery__item gallery__item--6">
+    <div class="content">
+      <a href="trading_titans" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static 'images/trading.jpeg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container gallery__item gallery__item--7">
+    <div class="content">
+      <a href="fashion_fiesta" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static 'images/fashion.jpg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+            
+  <div class="container gallery__item gallery__item--8">
+    <div class="content">
+      <a href="filmy_frenzy" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static 'images/movie.jpg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+        
+
+</div>
+
+<br>
+
+<h1 class="neon" style="text-align: center;">Technical Competitions<br></h1>
+
+<br>
+
+        
+            
+<div class="wrap">
+
+            <div class="container gallery__item gallery__item--1">
+  <div class="content">
+    <a href="disruptation" target="_blank">
+      <div class="content-overlay"></div>
+      <img class="content-image" src="{% static 'images/Hackathon.jpeg' %}">
+      <div class="content-details">
+        <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+
+<div class="container gallery__item gallery__item--2">
+    <div class="content">
+      <a href="kinetic_koding" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static 'images/Coding3.jpeg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container gallery__item gallery__item--3">
+    <div class="content">
+      <a href="odyessey" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static 'images/Casestudy.jpeg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container gallery__item gallery__item--4">
+    <div class="content">
+      <a href="enegron" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static 'images/enegron1.jpeg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container gallery__item gallery__item--5">
+    <div class="content">
+      <a href="haale_mausam" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static 'images/haalemausam1.jpeg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container gallery__item gallery__item--6">
+    <div class="content">
+      <a href="cerebral_flex" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static 'images/quiz5.jpeg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container gallery__item gallery__item--7">
+    <div class="content">
+      <a href="shark_tank" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static 'images/pitch_battle.jpg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+            
+  <div class="container gallery__item gallery__item--8">
+    <div class="content">
+      <a href="robo_rumble" target="_blank">
+        <div class="content-overlay"></div>
+        <img class="content-image" src="{% static 'images/Robowar.jpeg' %}">
+        <div class="content-details">
+          <h3 class="content-title"><i class="fas fa-arrow-right arrow"></i></h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+        
+    </div>
+</div>
+
+</body>
+</html>

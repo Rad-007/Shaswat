@@ -1,0 +1,113 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/signup.css'%}">
+    <title>
+        Registration Form
+    </title>
+    <link rel="icon" type="image/jpg" href="Images/Untitled design.jpg">
+    <link rel="website icon"  type="png" href="/static/images/icon.png">
+</head>
+
+<body>
+    <div class="container">
+        <video autoplay loop muted plays-inline class="BackgroundVideo">
+            <source src="{% static 'videos/bg_video6.mp4' %}" muted loop autoplay type="video/mp4">
+        </video>
+        <div class="wrapper">
+            <div class="form-wrapper register">
+                <!--
+                <form action="">
+                    <h2>Sign Up</h2>
+                    <div class="Input">
+                        <input type="text" required>
+                        <label for="">FirstName</label>
+                    </div>
+                    <div class="Input">
+                        <input type="text" required>
+                        <label for="">LastName</label>
+                    </div>
+                    <div class="Input">
+                        <input type="date" required>
+                    </div>
+                    <div class="Input">
+                        <input type="text" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="Input">
+                        <input type="email" required>
+                        <label for="">Email-Id</label>
+                    </div>
+                    <div class="Input">
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="remember">
+                        <label><input type="checkbox" required>I agree to the terms and conditions</label>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                    <div class="Sign-Up">
+                        <p>Already Have an Account?<a href="#">Sign In</a></p>
+                    </div>
+                </form>
+            -->
+
+            <form action="signup" method="POST" id="Register">
+                {% csrf_token %}
+                <div class="form">
+                        <div class="column1">
+                            <label for="UN" style="color: aliceblue;">Name</label> <span style="color: red">*</span><br>
+                            <input type="text" placeholder="Your Name" name="name" id="UN" required>
+                            <label for="PW" style="color: aliceblue;">Gender</label> <span style="color: red;">*</span><br>
+                            
+                            <select id="Gender" style="position:relative; " name="gender"><!--changed pos:rel-->
+                                <option value="Female">Female</option>
+                                <option value="Male">Male</option>
+                                
+                                    
+                            <option value="rather">Rather Not Say</option></select><br><br>
+                            
+                            <label for="e" style="color: aliceblue;">email</label> <span style="color: red;">*</span><br>
+                            <input type="email" placeholder="Email-Id" id="e" name="email" required>
+                            
+                        </div>
+                        <div class="column2">
+                            <label for="Phone-num" style="color: aliceblue;">Phone</label><br>
+                            <input type="tel" id="Phone-num" name="phone">
+
+                            <label for="Institute" style="color: aliceblue;">Institute</label><span style="color: red;">*</span><br>
+                            <input type="text" id="institute" name="institute">
+
+                            <label for="Referral" style="color: aliceblue;">Referral Code</label><br>
+                            <input type="text" id="referral" name="referral">
+                            
+                        </div>
+                    </div>
+                    <a onclick="submit_form()">Register</a>
+                                        
+                    <a style="left:80%;bottom: 40px;" href="profile">Back</a>
+
+
+                                                         </form>
+
+<script>
+function submit_form() {
+                document.getElementById("Register").submit();
+            }
+
+</script>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

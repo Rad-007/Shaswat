@@ -1,0 +1,175 @@
+
+{% load static %}
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Shashwat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static '\assets\css\landing_page.css' %}">
+  <link rel="website icon"  type="png" href="/static/images/icon.png">
+  
+  
+  
+</head>
+
+
+
+<body>
+
+  
+  <section class="showcase">
+    
+    <header>
+      <h2 class="logo">IIPE PRESENT'S</h2>
+      
+      
+<!---->
+
+      {% if user.is_authenticated %}
+
+      <a href="logout" class="glow">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Logout
+      </a>
+      
+      {% else %}
+      <a href="{% url 'social:begin' 'google-oauth2' %}" class="glow">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Sign in
+      </a>
+
+      {% endif %}
+      
+      <div class="toggle"></div>
+    </header>
+    <video src="{% static 'videos\bg_video4.mp4' %}" muted loop autoplay></video>
+
+    
+    <div class="overlay"></div>
+    <div class="text">
+      <h2>Shaswat 2k'23 </h2> <br>
+
+      
+    
+      <h3 style="text-transform: lowercase;color: #6eec08;">Powering the future</h3><br>
+      <p>A celebration of innovation , sustainability and entrepreneurship</p>
+      <a href="/static/pdfs/brochure.pdf" target="_blank" onclick="return openPDF(event)">Explore</a>
+      {% if user.is_authenticated %}
+      <a href="competition">Competitions</a>
+      <a href="events">Events</a>
+      {% else %}
+      <a href="#" onclick="showHeading()">Competitions</a>
+      <a href="#" onclick="showHeading()">Events</a>
+
+      {% endif %}
+    </div>
+
+    <script>
+      function openPDF(event) {
+        event.preventDefault(); // prevent the default behavior of the <a> tag
+        
+        // open the PDF file in a new window or tab
+        var pdfWindow=window.open('/static/pdfs/brochure.pdf', '_blank');
+        
+         //= window.open('/static/pdfs/example.pdf', '_blank');
+  
+  // wait for the PDF window to load
+  pdfWindow.onload = function() {
+    // show the print dialog
+    pdfWindow.print();
+    
+    // prompt the user to save the PDF file
+    pdfWindow.addEventListener('afterprint', function() {
+      var confirmDownload = confirm('Do you want to download this file?');
+      
+      if (confirmDownload) {
+        var fileName = 'example.pdf';
+        var a = document.createElement('a');
+        a.href = '/static/pdfs/' + fileName;
+        a.download = fileName;
+        a.click();
+      }
+      
+      // close the PDF window
+      pdfWindow.close();
+    });
+  };
+  
+  return false;
+      }
+
+      function showHeading() {
+
+        alert("Sign-In!");
+    
+      }
+
+      </script>
+
+
+    <ul class="social">
+      <li><a href="https://instagram.com/shaswat_iipe?igshid=MjljNjAzYmU="><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+      <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+      <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+     
+    </ul>
+  </section>
+
+  <div class="menu">
+    <ul>
+      {% if user.is_authenticated  %}
+      <li><a href="events">Events</a></li>
+      <li><a href="competition">Competitions</a></li>
+      <li><a href="signup">Register</a></li>
+      
+      {% else %}
+
+      <li><a href="#" onclick="showHeading()">Events</a></li>
+      <li><a href="#" onclick="showHeading()">Competitions</a></li>
+      <li><a href="#" onclick="showHeading()">Register</a></li>
+
+      {% endif %}
+
+
+      {% if user.is_authenticated %}
+      <li><a href="profile">Profile</a></li>
+      {% endif %}
+      <li><a href="#">Team</a></li>
+      
+      <li><a href="/">Sponsors</a></li>
+    </ul>
+  </div>
+    
+  
+
+<script>
+
+const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      })
+
+</script>
+
+
+</body>
+
+</html>

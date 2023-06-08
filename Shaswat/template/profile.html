@@ -1,0 +1,346 @@
+
+{% load static %}
+
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="website icon"  type="png" href="/static/images/icon.png">
+    <head><style>
+        @font-face{
+            font-family: stylefont;
+            src:url("{% static 'assets/fonts/ethnocentricrg.otf' %}")
+        
+        }
+        @media (max-width:500px) {
+          .event{
+            display: grid;
+            grid-template-columns: repeat(1 , 30vw);
+            grid-auto-rows: 40vh;
+            
+            justify-content: space-around;
+            margin-top: 18vh;
+            row-gap: 6vh;}
+          
+            img{
+              display: none;
+            }
+            .text{
+              font-size: 3.5vw;
+              line-height: 3vh;
+              letter-spacing: 2px;
+              transform: translate(-7vw ,0px);
+            }
+            .container{
+              transform: translate(-15vw, 3vh);
+            }
+            .event_container{
+              transform: translate(-28vw,0vw);
+            }
+            
+          }
+
+
+        @media (min-width:500px) and (max-width:930px){
+          .event{
+            display: grid;
+            grid-template-columns: repeat(2 , 30vw);
+            grid-auto-rows: 44vh;
+            column-gap: 22vw;
+            margin-left:2px;
+            margin-top: 18vh;
+            row-gap: 6vh;
+
+}
+          .text{
+            font-size:medium
+          }
+
+}
+
+
+        @media (min-width:930px){
+          .event{
+            display:grid;
+            grid-template-columns:repeat(3 , 30vw);
+            grid-auto-rows:44vh;   
+            gap:2vh;
+            margin-top:18vh;
+            margin-left:10vw;
+        }
+      
+
+        }
+        body{
+            margin:0;
+            font-family: stylefont;
+            background:radial-gradient(circle,rgb(21, 48, 95),rgb(24, 43, 97),black);
+            overflow-x: hidden;
+        }
+        .imgflex{
+          display:flex;
+          height:70svh;
+          width:100svw;
+          position:relative;
+          top:5vh;
+        }
+        
+        img{
+          position: relative;
+          /*top: 12svh;*/
+          height: 70svh;
+          width: 40svw;
+          filter: drop-shadow(5px 5px 2px teal);
+        }
+
+        .container{
+            height:70svh;
+            width:auto;
+            font-size: 20px;
+            font-family: stylefont;
+            color:whitesmoke;
+            letter-spacing: 5px;
+            text-shadow:0px 4px 2px magenta;
+            font-weight:600;
+            
+            position:absolute;
+            top:8vw;
+            left:35svw;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            text-align:justify;
+            line-height:55px;
+        }
+        .identifier{
+            color:rgb(127, 255, 212);
+        }
+        .roof{
+            height:15vh;
+            width:50vw;
+            border:10px solid teal;
+            filter:drop-shadow(2px black);
+            transform: rotatex(70deg) rotatey(0deg);
+            
+        }
+        
+        .cloud{
+            animation:cloud 5s infinite ease-in-out;
+
+        }
+        
+        .event_container{
+
+            height:40vh;
+            width:40vh;
+            border:8px solid none;
+
+            border-radius:30vh;
+            
+        }
+        .event_half{
+            height:20vh;
+            width:40vh;
+            border:2px solid none;
+            border-radius:40vh 40vh 0vh 0vh;
+            background: #d7a8f9;
+            box-shadow: 4px 0px 2px black;
+            text-align:justify;
+        }
+        .event_full{
+            height:20vh;
+            width:40vh;
+            border:2px solid none;
+            border-radius:0vh 0vh 40vh 40vh;
+            background: rgba(249, 79, 144, 0.6);
+            box-shadow: -4px -4px 2px black;
+        }
+        .event_content{
+            position:relative;
+            z-index:2;
+            top:10vh;
+            left:10vh;
+        }
+
+
+.glow {
+  position: absolute;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color: #f5f6f7;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  z-index: 500;
+}
+.glow:hover {
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+.glow:nth-child(1) {
+  filter: hue-rotate(270deg);
+}
+.glow:nth-child(2) {
+  filter: hue-rotate(110deg);
+}
+a span {
+  position: absolute;
+  display: block;
+}
+.glow span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+.glow span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+.glow span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+.glow span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+    </style></head>
+    <body>
+
+      <a href="/" class="glow">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        HOME
+        
+      </a>
+      
+
+        <div class="imgflex">
+        {% if user.gender == 'Male' %}
+          <img src="{% static 'images/profile_img.png' %}"  href="/">
+          {% elif user.gender == 'Female' %}
+          <img src="{% static 'images/profile_img2.png' %}"  href="/">
+
+         {% endif %}
+
+
+          {% if user.name is None %}
+          <div class="container">
+              <div class="roof"></div>
+              <span class="identifier">Name  : <a href="signup" style="color:white;"> Register Here </a> <br>
+              <span class="identifier">Representing  :</span>
+              {{ user.institute }}
+             <br>
+              <span class="identifier">Email:</span>{{ email }}
+              <br>
+              
+              
+              <div class="roof two"></div>
+              <div class="cloud"></div>
+          </div>
+          {% else %}
+          <div class="container">
+            <div class="roof"></div>
+            <span class="identifier">Name  : </span>{{ user.name }} <br>
+            <span class="identifier">Representing  :</span>
+            {{ user.institute }}
+           <br>
+            <span class="identifier">Email:</span>{{ email }}
+            <br>
+            
+            
+            <div class="roof two"></div>
+            <div class="cloud"></div>
+        </div>
+        {% endif %}
+        </div>
+<!--
+        <div class="event">
+            <div class="event_container">
+                <div class="event_half"><span class="event_content">Event 1</span></div>
+                <div class="event_full"></div>
+            </div>
+        <div class="event_container">
+            <div class="event_half"><span class="event_content">Event 2</span></div>
+            <div class="event_full"></div>
+        </div>
+        <div class="event_container">
+            <div class="event_half"><span class="event_content">Event 3</span></div>
+            <div class="event_full"></div>
+        </div>
+        <div class="event_container">
+            <div class="event_half"><span class="event_content">Event 4</span></div>
+            <div class="event_full"></div>
+        </div>
+        <div class="event_container">
+            <div class="event_half"><span class="event_content">Event 5</span></div>
+            <div class="event_full"></div>
+        </div>
+        <div class="event_container">
+            <div class="event_half"><span class="event_content">Event 6</span></div>
+            <div class="event_full"></div>
+        </div>
+        </div>
+-->
+    </body>
+</html5>

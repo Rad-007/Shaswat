@@ -1,0 +1,309 @@
+@media (max-width:360px){
+	h3{
+		font-size:75px;
+	}
+}
+
+body{
+    background: radial-gradient(circle, rgb(21, 48, 95), rgb(24, 43, 97), black);
+     background-image: url('/static/assets/css/bg-1.jpg') no-repeat cover; 
+     color: #FFFFFF;
+    width: 100vw;
+	height: 400vh;
+	display: block!important;
+    overflow-x: hidden;
+	overflow-y:scroll;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+   }
+   .glow {
+	position: absolute;
+	display: inline-block;
+	padding: 25px 30px;
+	margin: 40px 0;
+	color: #f5f6f7;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 0.5s;
+	letter-spacing: 4px;
+	overflow: hidden;
+	z-index: 500;
+	top: 0svh;
+	left:10svw;
+
+  }
+  .glow:hover {
+	background: #03e9f4;
+	color: #050801;
+	box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+	  0 0 200px #03e9f4;
+	-webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  }
+  .glow:nth-child(1) {
+	filter: hue-rotate(270deg);
+  }
+  .glow:nth-child(2) {
+	filter: hue-rotate(110deg);
+  }
+  a span {
+	position: absolute;
+	display: block;
+  }
+  .glow span:nth-child(1) {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #03e9f4);
+	animation: animate1 1s linear infinite;
+  }
+  @keyframes animate1 {
+	0% {
+	  left: -100%;
+	}
+	50%,
+	100% {
+	  left: 100%;
+	}
+  }
+  .glow span:nth-child(2) {
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #03e9f4);
+	animation: animate2 1s linear infinite;
+	animation-delay: 0.25s;
+  }
+  @keyframes animate2 {
+	0% {
+	  top: -100%;
+	}
+	50%,
+	100% {
+	  top: 100%;
+	}
+  }
+  .glow span:nth-child(3) {
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #03e9f4);
+	animation: animate3 1s linear infinite;
+	animation-delay: 0.5s;
+  }
+  @keyframes animate3 {
+	0% {
+	  right: -100%;
+	}
+	50%,
+	100% {
+	  right: 100%;
+	}
+  }
+  .glow span:nth-child(4) {
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #03e9f4);
+	animation: animate4 1s linear infinite;
+	animation-delay: 0.75s;
+  }
+  @keyframes animate4 {
+	0% {
+	  bottom: -100%;
+	}
+	50%,
+	100% {
+	  bottom: 100%;
+	}
+  }
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Kanit&display=swap");
+
+h3 {
+	position:relative;
+	top:10vh;
+	text-decoration: underline;
+	
+  font-size: calc(15px + 10vh);
+  line-height: calc(10px + 10vh);
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+    0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: teal;
+  font-family: "Kanit", cursive;
+  text-align: top;
+  -webkit-animation: blink 3s infinite;
+  animation: blink 3s infinite;
+  left: 10vw;
+}
+
+@-webkit-keyframes blink {
+	20%,
+	24%,
+	55% {
+	  color: #111;
+	  text-shadow: none;
+	}
+  
+	0%,
+	19%,
+	21%,
+	23%,
+	25%,
+	54%,
+	56%,
+	100% {
+	  /*     color: #fccaff;
+	  text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+		0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+	  text-shadow:0 0 5px #00a5ff, 0 0 15px #00a5ff, 0 0 20px #00a5ff, 0 0 40px #00A5EE, 0 0 60px #0000ff, 0 0 10px #8d00ff, 0 0 98px #0000ff;
+	  color: aqua;
+	}
+  }
+  
+  @keyframes blink {
+	20%,
+	24%,
+	55% {
+	  color: #111;
+	  text-shadow: none;
+	}
+  
+	0%,
+	19%,
+	21%,
+	23%,
+	25%,
+	54%,
+	56%,
+	100% {
+	  /*     color: #fccaff;
+	  text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+		0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+	  text-shadow:0 0 5px #00a5ff, 0 0 15px #00a5ff, 0 0 20px #00a5ff, 0 0 40px #00A5EE, 0 0 60px #0000ff, 0 0 10px #8d00ff, 0 0 98px #0000ff;
+	  color: aqua;
+	}
+  }
+  
+
+.event{
+	width:100svw;
+	position:relative;
+	top:10vh;
+	display:flex;
+	flex-wrap:wrap;
+}
+.card{
+ margin-top: 5vh!important;
+ width:60vw;
+ margin: auto;
+ height: 70vw;
+ max-height:600px;
+ max-width: 500px;
+ position: relative;
+ transition: transform 4s ease-in;
+ overflow: hidden;
+ border: solid rgba(0, 0, 0, 0.6);
+ border-radius: 2%;
+ border-left-width: 5vw;
+ backdrop-filter: blur(100px);
+ top:7vh;
+ font-size:xx-large;
+ font-weight:800;
+}
+img{
+ width:100%;
+ height: 100%;
+ transition: transform 1s ease-in;
+}
+img:hover{
+ transform: scale(1.2);
+}
+.card:before {
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+ left:0;
+ content: " ";
+ transform:translateY(-100%);
+ font-size: 25px;
+ color:#171616;
+display: block;
+ background-color: rgba(188, 143, 143, 0.137);
+ z-index: 1;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+font-family: sans-serif;
+ transition: transform .4s ease-in;
+ border:4px solid aqua;
+ justify-content: center;
+ box-sizing: border-box;
+ box-shadow:0 0 5px #00a5ff, 0 0 15px #00a5ff, 0 0 20px #00a5ff, 0 0 40px #00A5EE, 0 0 60px #0000ff, 0 0 10px #8d00ff, 0 0 98px #0000ff;
+ 
+}
+
+.card:after {
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+ left:0;
+ content: "Dance Night For All";
+ transform:translateY(100%);
+ font-size: 25px;
+ color:aqua;
+display: block;
+ background-color: rgba(188, 143, 143, 0.137);
+ z-index: 1;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+font-family: sans-serif;
+ transition: transform .4s ease-in;
+ border:4px solid aqua;
+ justify-content: center;
+ box-sizing: border-box;
+
+}
+
+.div2::after
+{
+	content: "Celebrity Night";
+		
+}
+.div1::after
+{
+	content: "Blast off EDM Night";
+		
+}
+
+.div3::after
+{
+	content: "Models on Stage";
+		
+}
+.card:hover::before{
+transform: translateY(0%); 
+
+}
+.card:hover::after{
+ transform: translateY(0%); 
+ 
+}

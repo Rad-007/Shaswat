@@ -1,0 +1,73 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Shaswat</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Aayush">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'assets/css/payment.css' %}">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+<link rel="website icon"  type="png" href="/static/images/icon.png">
+  
+  
+</head>
+
+<body>
+
+
+
+
+
+
+<div class="container" id="container">
+    <div class="card">
+
+       <img  src="{% static 'images/upi.png'}">
+
+       <h3>Scan Qr Code or Use UPI</h3>
+
+       <form action="" method="POST" id="payment">
+        {% csrf_token %}
+
+        <label for="UN" style="color: aliceblue;">UTR </label> <span style="color: red">*</span><br>
+                            <input type="text" placeholder="Enter Payment UTR" name="utr" id="UN" required>
+
+                            <label for="UN" style="color: aliceblue;">Email Id </label> <span style="color: red">*</span><br>
+                            <input type="text" placeholder="Enter Email Id for Ticket" name="email" id="UN" required>
+
+
+
+       </form>
+
+       <a href="#" id="upi_button" style="position:absolute;top: 85%;right: 44%;">Submit Details
+    </a>
+      
+    </div>
+  </div>
+  <script>
+
+document.getElementById('upi_button').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor tag behavior
+    document.getElementById('payment').submit(); // Submit the form
+  });
+
+  document.getElementById("upi_button").addEventListener("click", function(){
+			setTimeout(function(){
+				alert("Details Submitted. You will be redirected in 3 seconds");
+			}, 5000); // 5000 milliseconds = 5 seconds
+		});
+
+  </script>
+
+
+</body>
+</html>
